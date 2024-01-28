@@ -1,7 +1,7 @@
 import React from 'react'
 
 // const loadingGif = 'https://tenor.com/en-IN/view/loading-splash-gif-21140992'
-import LoadingGif from '../images/icegif-1263.gif'
+import LoadingGif from '../images/loading-loading-forever.gif'
 
 const Loader = () => {
     return (

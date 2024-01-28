@@ -160,6 +160,16 @@ section {
 }
 
 
+.loader {
+  display: grid;
+  place-items: center;
+}
+
+.loader__image {
+  width: 4rem;
+  aspect-ratio: 1/1;
+}
+
 
 
 
