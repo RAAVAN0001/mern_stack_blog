@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../images/logo.png'
+import logo from '../../public/pngwing.com.png'
 import { FaBars } from 'react-icons/fa'
 import { AiOutlineClose } from 'react-icons/ai'
 

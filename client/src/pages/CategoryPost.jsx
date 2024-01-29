@@ -39,7 +39,7 @@ const categoryPost = () => {
             posts.map(({ _id: id, thumbnail, category, title, description, creator, createdAt }) => <PostItem key={id} thumbnail={thumbnail} title={title} postID={id} category={category} description={description} authorID={creator} createdAt={createdAt} />)
           }
 
-        </div> : <h2 className='center'>no posts</h2>
+        </div> : <h2 className='center'>No Posts</h2>
         }
       </section>
     </>
