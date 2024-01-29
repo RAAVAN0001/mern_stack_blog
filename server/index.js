@@ -12,7 +12,9 @@ const port = process.env.PORT || 5000;
 
 app.use(express.json({ extended: true }))
 app.use(express.urlencoded({ extended: true }))
-app.use(cors({ credentials: true, origin: 'https://monkeyblogs.7vfail.com/' }));
+// app.use(cors({ credentials: true, origin: 'https://monkeyblogs.7vfail.com/' }));
+app.use(cors({ credentials: true, origin: '*' }));
+
 app.use(upload())
 app.use('/Uploads', express.static(__dirname + '/Uploads'));
 
