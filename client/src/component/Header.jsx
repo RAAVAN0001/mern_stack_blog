@@ -40,6 +40,7 @@ const Header = () => {
           {/* <li><Link to={'/create'} onClick={closeNavHandler} >Create Post</Link></li> */}
           <li><Link to={'/authors'} onClick={closeNavHandler} >Authors</Link></li>
           <li><Link to={'/register'} onClick={closeNavHandler} >Register</Link></li>
+          <li><Link to={'/login'} onClick={closeNavHandler} >Login</Link></li>
         </ul>}
         <button className="nav__toggle-btn" onClick={() => setIsNavShowing(!isNavShowing)}>
           {
