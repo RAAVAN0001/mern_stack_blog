@@ -49,7 +49,7 @@ const LoginPage = () => {
           {/* <input type="password" placeholder='confirm password' name='password2' value={userData.password2} onChange={changeInputHandler} /> */}
 
           <button type="submit" className='btn primary'>Login</button>
-          <small><Link to={'/register'}>Dont have an account? Sign up</Link></small>
+          <small><Link to={'/register'}>Don't have an account? Sign up</Link></small>
         </form>
       </div>
     </section>
