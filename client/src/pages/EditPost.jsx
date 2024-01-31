@@ -86,7 +86,7 @@ const EditPost = () => {
     postData.append('thumbnail', thumbnail)
 
     try {
-      const response = await axios.patch(`${import.meta.env.VITE_APP_BASE_URI}/posts/${id}`, postData, { withCredentials: true, headers: { Authorization: `Bearer ${token}` } })
+      const response = await axios.patch(`https://blog-server-yr2c.onrender.com/api/posts/${id}`, postData, {  headers: { Authorization: `Bearer ${token}` } })
       if (response.status == 200) {
         return navigate('/')
       }

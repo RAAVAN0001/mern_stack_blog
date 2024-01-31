@@ -65,7 +65,7 @@ const CreatePost = () => {
     postData.append('thumbnail', thumbnail)
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URI}/posts`, postData, { withCredentials: true, headers: { Authorization: `Bearer ${token}` } })
+      const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URI}/posts`, postData, { headers: { Authorization: `Bearer ${token}` } })
       if (response.status == 201) {
         return navigate('/')
       }

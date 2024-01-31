@@ -31,10 +31,11 @@ const UserProfile = () => {
     useEffect(() => {
         const getUser = async () => {
             try {
-                const response = await axios.get(`${import.meta.env.VITE_APP_BASE_URI}/users/${currentUser.id}`, {
-                    withCredentials: true, headers:
+                const response = await axios.get(`https://blog-server-yr2c.onrender.com/api/users/${currentUser.id}`, {
+                    headers:
                         { Authorization: `Bearer ${token}` }
                 })
+                
 
                 const { name, email, avatar } = response.data
                 setName(name)
@@ -57,8 +58,8 @@ const UserProfile = () => {
         try {
             const postData = new FormData();
             postData.append('avatar', avatar);
-            const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URI}/users/change-avatar`, postData, {
-                withCredentials: true, headers: { Authorization: `Bearer ${token}` }
+            const response = await axios.post(`https://blog-server-yr2c.onrender.com/api/users/change-avatar`, postData, {
+                 headers: { Authorization: `Bearer ${token}` }
             })
             setAvatar(response.data.avatar)
         } catch (err) {
@@ -73,6 +74,7 @@ const UserProfile = () => {
 
         try {
             const userData = new FormData()
+            userData.append('avatar', avatar)
             userData.append('name', name)
             userData.append('email', email)
             userData.append('currentPassword', currentPassword)
@@ -100,7 +102,7 @@ const UserProfile = () => {
                 <div className="profile__details">
                     <div className="avatar__wrapper">
                         <div className="profile__avatar">
-                            <img src={`${import.meta.env.VITE_APP_ASSETS_URI}/Uploads/${avatar}`} alt="" />
+                            <img src={`https://blog-server-yr2c.onrender.com/Uploads/${avatar}`} alt="" />
                         </div>
                         {/* from to update the avatar */}
                         <form action="" className="avatar__form">

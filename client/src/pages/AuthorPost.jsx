@@ -16,7 +16,7 @@ const AuthorPost = () => {
     const fetchPosts = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`${import.meta.env.VITE_APP_BASE_URI}/posts/users/${id}`)
+        const response = await axios.get(`https://blog-server-yr2c.onrender.com/api/posts/users/${id}`)
         setPosts(response?.data)
 
       } catch (err) {

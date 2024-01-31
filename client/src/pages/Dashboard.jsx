@@ -31,8 +31,8 @@ const Dashboard = () => {
     const fetchPosts = async () => {
       setIsLoading(true)
       try {
-        const response = await axios.get(`${import.meta.env.VITE_APP_BASE_URI}/posts/users/${id}`, {
-          withCredentials: true, headers: { Authorization: `Bearer ${token}` }
+        const response = await axios.get(`https://blog-server-yr2c.onrender.com/api/posts/users/${id}`, {
+           headers: { Authorization: `Bearer ${token}` }
         })
         setPosts(response.data)
       } catch (err) {
@@ -57,7 +57,7 @@ const Dashboard = () => {
               return <article key={post.id} className='dashboard__posts'>
                 <div className="dashboard__post-info">
                   <div className="dashboard__post-thumbnail">
-                    <img src={`${import.meta.env.VITE_APP_ASSETS_URI}/Uploads/${post.thumbnail}`} alt="" />
+                    <img src={`https://blog-server-yr2c.onrender.com/Uploads/${post.thumbnail}`} alt="" />
                   </div>
                   <h5>{post.title}</h5>
                 </div>

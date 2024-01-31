@@ -10,7 +10,7 @@ const PostItem = ({ postID, category, title, description, authorID, thumbnail,cr
     return (
         <article className="post">
             <div className="post__thumbnail">
-                <img src={`${import.meta.env.VITE_APP_ASSETS_URI}/Uploads/${thumbnail}`} alt={title} />
+                <img src={`https://blog-server-yr2c.onrender.com/Uploads/${thumbnail}`} alt={title} />
             </div>
             <div className="post__content">
                 <Link to={`/posts/${postID}`}>

@@ -31,9 +31,7 @@ const DeletePost = ({ postId: id }) => {
   const removePost = async (id) => {
     setIsLoading(true)
     try {
-      const response = await axios.delete(`${import.meta.env.VITE_APP_BASE_URI}/posts/${id}`, {
-        withCredentials: true, headers: { Authorization: `Bearer ${token}` }
-      })
+      const response = await axios.delete(`https://blog-server-yr2c.onrender.com/api/posts/${id}`)
       if (response.status == 200) {
         if (location.pathname == `/myposts/${currentUser.id}`) {
           navigate(0)

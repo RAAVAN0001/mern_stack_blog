@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import Loader from '../component/Loader'
 import axios from 'axios'
 
+import { RxAvatar } from 'react-icons/rx'
+import pic from '../images/defalutpic.webp'
+
 const Authors = () => {
 
 
@@ -12,6 +15,7 @@ const Authors = () => {
 
 
   useEffect(() => {
+    console.log(`${import.meta.env.VITE_APP_ASSETS_URI}`)
     const getAuthors = async () => {
       setIsLoading(true)
       try {
@@ -35,10 +39,10 @@ const Authors = () => {
     <section className="authors">
       {authors.length > 0 ? <div className="container authors__container">
         {
-          authors.map(({ _id:id, avatar, name, posts }) => {
+          authors.map(({ _id: id, avatar, name, posts }) => {
             return <Link key={id} to={`/posts/users/${id}`} className='author'>
               <div className="author__avatar">
-                <img src={`${import.meta.env.VITE_APP_ASSETS_URI}/Uploads/${avatar}`} alt={`image of ${name}`} />
+                <img src={`https://blog-server-yr2c.onrender.com/Uploads/${avatar}`} />
               </div>
               <div className="author__info">
                 <h4>{name}</h4>
