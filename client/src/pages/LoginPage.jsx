@@ -27,7 +27,7 @@ const LoginPage = () => {
     e.preventDefault();
     setError('')
     try {
-      const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URI}/users/login`, userData)
+      const response = await axios.post(`https://blog-server-yr2c.onrender.com/api/users/login`, userData)
       const user = await response.data;
       setCurrentUser(user)
       navigate('/')
